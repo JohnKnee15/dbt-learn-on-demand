@@ -5,7 +5,7 @@ with orders as (
         user_id as customer_id,
         order_date,
         status
-    from "RAW"."JAFFLE_SHOP"."ORDERS"
+    from {{ source('jaffle_shop', 'orders')}}
 
 )
 
